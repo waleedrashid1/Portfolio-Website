@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waleed Rashid - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" type="icon" href="assets/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="toggleMenu()">Close</button>
+    <a href="#" onclick="event.preventDefault(); scrollToSection('home'); toggleMenu();">Home</a>
+    <a href="#" onclick="event.preventDefault(); scrollToSection('about'); toggleMenu();">About</a>
+    <a href="#" onclick="event.preventDefault(); scrollToSection('projects'); toggleMenu();">Projects</a>
+    <a href="#" onclick="event.preventDefault(); scrollToSection('contact'); toggleMenu();">Contact</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-wordmark" href="#" onclick="event.preventDefault(); scrollToSection('home');">Waleed <em>Rashid</em></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="event.preventDefault(); scrollToSection('home');">Home</a></li>
+      <li><a href="#" onclick="event.preventDefault(); scrollToSection('about');">About</a></li>
+      <li><a href="#" onclick="event.preventDefault(); scrollToSection('projects');">Projects</a></li>
+      <li><a href="#" onclick="event.preventDefault(); scrollToSection('contact');">Contact</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-label">Computer Engineer · Full-Stack Developer · Embedded Systems Enthusiast</p>
+        <h1 class="hero-name">Waleed<br>Rashid</h1>
+        <p class="hero-sub">Bridging hardware and software. Interested in embedded systems, full-stack development, and building things that interact with the physical world.</p>
+        <div class="hero-actions">
+          <div class="hero-buttons">
+            <a class="btn-fill" href="./assets/Waleed_Rashid_Resume.pdf" download="Waleed_Rashid_Resume.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v10"/><path d="M8 9l4 4 4-4"/><path d="M5 15v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"/></svg>
+              Download Resume
+            </a>
+            <a class="btn-ghost" href="#projects" onclick="event.preventDefault(); scrollToSection('projects');">View Projects</a>
+          </div>
+          <div class="hero-socials">
+            <a class="social-link" href="https://github.com/waleed-rashid" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/waleed-rashid" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a5.5 5.5 0 0 1 2-1z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a class="social-link" href="mailto:wrashid@torontomu.ca">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="schematic-card">
+          <div class="corner tl"></div>
+          <div class="corner tr"></div>
+          <div class="corner bl"></div>
+          <div class="corner br"></div>
+          <div class="schematic-inner">
+            <img src="./assets/headshot-bg.png" class="avatar-image" alt="Waleed Rashid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-header reveal">
+        <h2 class="section-heading">About Me</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="about-grid">
+        <div class="panel reveal d2">
+          <p class="panel-heading">About</p>
+          <div class="about-text-block">
+            <p class="about-text">I’m a Computer Engineering student at Toronto Metropolitan University with a strong interest in embedded systems, low-level programming, and building technology that interacts with the physical world.</p>
+            <p class="about-text">My work sits at the intersection of hardware and software, where I enjoy designing systems, writing efficient code, and turning ideas into practical solutions.</p>
+          </div>
+        </div>
+        <div class="panel reveal d1">
+          <p class="panel-heading">Technical Skills</p>
+          <div class="skills-list">
+  <div class="skills-col">
+    <div class="skill-row"><span class="skill-name">Java</span></div>
+    <div class="skill-row"><span class="skill-name">HTML</span></div>
+    <div class="skill-row"><span class="skill-name">CSS</span></div>
+    <div class="skill-row"><span class="skill-name">C/C++</span></div>
+    <div class="skill-row"><span class="skill-name">VHDL</span></div>
+    <div class="skill-row"><span class="skill-name">MATLAB</span></div>
+    <div class="skill-row"><span class="skill-name">JavaScript</span></div>
+  </div>
+  <div class="skills-col">
+    <div class="skill-row"><span class="skill-name">TypeScript</span></div>
+    <div class="skill-row"><span class="skill-name">Python</span></div>
+    <div class="skill-row"><span class="skill-name">SQL</span></div>
+    <div class="skill-row"><span class="skill-name">Assembly</span></div>
+    <div class="skill-row"><span class="skill-name">React</span></div>
+    <div class="skill-row"><span class="skill-name">Node.js</span></div>
+    <div class="skill-row"><span class="skill-name">Express.js</span></div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-inner">
+      <div class="projects-header reveal">
+        <h2 class="section-heading">Projects</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal d1">
+          <div class="project-thumb-block">
+            <div class="project-thumb-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v16M2 9h6M2 14h6"/><circle cx="15" cy="12" r="2"/><path d="M17 12h3"/></svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Mini Multithreaded HTTP Server</h3>
+            <p class="project-desc">In Development</p>
+            <div class="project-footer">
+              <div class="tech-list">
+                <span class="tech-chip"></span>
+                <span class="tech-chip"></span>
+                <span class="tech-chip"></span>
+              </div>
+              <a class="project-link" href="#" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal d3">
+          <div class="project-thumb-block has-project-image" style="--project-image: url('./assets/ayahtrack-logo.png');">
+            <div style="position:absolute; inset:0; background:rgba(7,9,15,0.5);"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">AyahTrack</h3>
+            <p class="project-desc">In Development</p>
+            <div class="project-footer">
+              <div class="tech-list">
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Express.js</span>
+                <span class="tech-chip">JavaScript</span>
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">PostgreSQL</span>
+              </div>
+              <a class="project-link" href="https://github.com/waleed-rashid/AyahTrack" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+       <div class="project-card reveal d3">
+          <div class="project-thumb-block has-project-image" style="--project-image: url('./assets/robot-maze-bg.png');">
+            <div style="position:absolute; inset:0; background:rgba(7,9,15,0.5);"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Maze-Solving Autonomous Robot</h3>
+            <p class="project-desc">Developed an autonomous robot capable of navigating and solving a maze without human input by combining sensor data with real-time decision logic. The system continuously analyzes its surroundings, updates its path, and adjusts movement to reach the exit efficiently. This project explores the intersection of embedded systems, robotics, and algorithmic problem-solving in real-world environments.</p>
+            <div class="project-footer">
+              <div class="tech-list">
+                <span class="tech-chip">Embedded Systems</span>
+                <span class="tech-chip">Sensors</span>
+                <span class="tech-chip">Control Logic</span>
+                <span class="tech-chip">Robotics</span>
+              </div>
+              <a class="project-link" href="#" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal d3">
+          <div class="project-thumb-block has-project-image" style="--project-image: url('./assets/alu-cpu-bg.png');">
+            <div style="position:absolute; inset:0; background:rgba(7,9,15,0.5);"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">ALU and FSM CPU Design</h3>
+            <p class="project-desc">Designed and implemented a custom CPU datapath centered around an Arithmetic Logic Unit (ALU) using VHDL and deployed it on an FPGA. The system integrates registers, control logic, and arithmetic operations to execute low-level instructions in hardware.</p>
+            <div class="project-footer">
+              <div class="tech-list">
+                <span class="tech-chip">VHDL</span>
+                <span class="tech-chip">FPGA</span>
+                <span class="tech-chip">Digital Logic</span>
+              </div>
+              <a class="project-link" href="#" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal d4">
+          <div class="project-thumb-block has-project-image" style="--project-image: url('./assets/bookstore-app-bg.png');">
+            <div style="position:absolute; inset:0; background:rgba(7,9,15,0.5);"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">State-Driven Bookstore Management Application</h3>
+            <p class="project-desc">Developed a JavaFX-based bookstore application that dynamically adapts customer behavior using the State Design Pattern to manage membership tiers and reward logic. The system handles purchases, point accumulation, and real-time status transitions while maintaining persistent data storage. This project explores how object-oriented design patterns translate into scalable, interactive applications.</p>
+            <div class="project-footer">
+              <div class="tech-list">
+                <span class="tech-chip">OOP Design Patterns</span>
+                <span class="tech-chip">File I/O</span>
+              </div>
+              <a class="project-link" href="https://github.com/waleed-rashid/BookstoreApp" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal d5">
+          <div class="project-thumb-block has-project-image" style="--project-image: url('./assets/snakes-and-ladders-background.jpg');">
+            <div style="position:absolute; inset:0; background:rgba(7,9,15,0.5);"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Advanced Snakes and Ladders</h3>
+            <p class="project-desc">Developed an object-oriented implementation of Snakes and Ladders in Java, modeling game logic, player behavior, and board mechanics through modular class design. The system simulates dice rolls, snakes, ladders, and turn-based progression while maintaining a clean and extensible architecture.</p>
+            <div class="project-footer">
+              <div class="tech-list">
+                <span class="tech-chip">Java</span>
+                <span class="tech-chip">MVC</span>
+                <span class="tech-chip">AI</span>
+              </div>
+              <a class="project-link" href="https://github.com/waleed-rashid/snakes-and-ladders-game" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal d6">
+          <div class="project-thumb-block has-project-image" style="--project-image: url('./assets/ludo-background.jpg');">
+            <div style="position:absolute; inset:0; background:rgba(7,9,15,0.5);"></div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Ludo Board Game</h3>
+            <p class="project-desc">The classic Ludo game for two players — similar to "Sorry!" — built with Java's drawing library. Players alternate dice rolls and race their pieces around the board. First to reach home wins.</p>
+            <div class="project-footer">
+              <div class="tech-list">
+                <span class="tech-chip">Java</span>
+                <span class="tech-chip">Graphics</span>
+                <span class="tech-chip">2-Player</span>
+              </div>
+              <a class="project-link" href="https://github.com/waleed-rashid/Ludo-Board-Game" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-header reveal">
+        <h2 class="section-heading">Contact Me</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal d1">
+          <h3 class="contact-left-title">Let's Connect.</h3>
+          <div class="contact-card-list">
+            <a class="contact-card" href="mailto:wrashid@torontomu.ca">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">Email</span>
+              </div>
+            </a>
+            <a class="contact-card" href="https://www.linkedin.com/in/waleed-rashid" target="_blank">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a5.5 5.5 0 0 1 2-1z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">LinkedIn</span>
+              </div>
+            </a>
+            <a class="contact-card" href="https://github.com/waleed-rashid" target="_blank">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">GitHub</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal d2">
+          <div class="form-intro">
+            <h4>Or send me a message directly.</h4>
+          </div>
+          <form id="contactForm" name="submit-to-google-sheet">
+            <div class="form-row">
+              <label class="form-label">Name</label>
+              <input class="form-control" type="text" name="Name" placeholder="Your name" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label">Email</label>
+              <input class="form-control" type="email" name="Email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" name="Message" placeholder="What's on your mind?"></textarea>
+            </div>
+            <button type="submit" class="form-btn">Send Message</button>
+            <div class="form-status" id="formMsg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-brand">Waleed Rashid</span>
+    <span class="footer-copy">© 2026</span>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    const revEls = document.querySelectorAll('.reveal');
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    revEls.forEach(el => revObs.observe(el));
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxgxodwkCXREeB_AH3zIzvH4JiMODodxMJtRgBF6K93ziqJLvFf5Bolq_jdtkm9MLw9/exec';
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(() => { msg.textContent = 'Message sent successfully.'; setTimeout(() => msg.textContent = '', 5000); form.reset(); })
+        .catch(() => { msg.textContent = 'Something went wrong — please email directly.'; });
+    });
+  </script>
+</body>
+</html>
