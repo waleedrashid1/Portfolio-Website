@@ -241,11 +241,11 @@ h1.hero-name {
 }
 
 .panel:has(.skills-list) { width: fit-content; justify-self: start; }
-.skills-list { display: grid; grid-template-columns: repeat(2, 170px); gap: 0 14px; }
+.skills-list { display: grid; grid-template-columns: repeat(2, 132px); gap: 0 12px; }
 .skills-col { display: flex; flex-direction: column; gap: 9px; }
 .skill-row {
   display: flex; align-items: center; justify-content: space-between; padding: 10px 12px;
-  max-width: 170px; width: 100%;
+  max-width: 132px; width: 100%;
   background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px;
   transition: transform 0.2s ease, border-color 0.25s ease, background 0.25s ease;
 }
@@ -310,9 +310,34 @@ h1.hero-name {
 .tech-list { display: flex; gap: 7px; flex-wrap: wrap; }
 .tech-chip { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; padding: 5px 9px; border-radius: 999px; color: var(--white); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); transition: transform 0.2s ease, border-color 0.25s ease, background 0.25s ease; }
 .tech-chip:hover { transform: translateY(-1px); border-color: rgba(58,99,255,0.28); background: rgba(58,99,255,0.06); }
-.project-link { display: inline-flex; align-items: center; gap: 7px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.02em; color: var(--blue-soft); text-decoration: none; padding: 6px 2px; transition: color 0.25s, gap 0.2s; }
-.project-link:hover { color: var(--teal); gap: 8px; }
+.project-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.project-link { display: inline-flex; align-items: center; gap: 7px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.02em; color: var(--blue-soft); text-decoration: none; padding: 9px 12px; border: 1px solid rgba(58,99,255,0.24); border-radius: 999px; background: rgba(58,99,255,0.06); transition: color 0.25s, gap 0.2s, border-color 0.25s, background 0.25s, transform 0.2s ease; }
+.project-link:hover { color: var(--teal); gap: 8px; border-color: rgba(79,209,197,0.36); background: rgba(79,209,197,0.08); transform: translateY(-1px); }
 .project-link svg { width: 15px; height: 15px; }
+.project-demo-button { appearance: none; font-family: inherit; cursor: pointer; }
+
+.video-modal {
+  position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
+  padding: 28px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.video-modal.open { opacity: 1; visibility: visible; pointer-events: auto; }
+.video-modal-backdrop { position: absolute; inset: 0; background: rgba(4,7,15,0.78); backdrop-filter: blur(10px); }
+.video-modal-dialog {
+  position: relative; width: min(900px, 100%); border-radius: 24px; padding: 24px;
+  background: linear-gradient(180deg, rgba(17,27,49,0.98), rgba(10,16,32,0.98));
+  border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 28px 70px rgba(0,0,0,0.45);
+}
+.video-modal-dialog h3 { color: var(--white); font-size: 1.25rem; margin-bottom: 16px; }
+.video-modal-close {
+  position: absolute; top: 16px; right: 16px; width: 38px; height: 38px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--white);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.25s, border-color 0.25s;
+}
+.video-modal-close:hover { background: rgba(58,99,255,0.12); border-color: rgba(58,99,255,0.35); }
+.video-modal-close svg { width: 18px; height: 18px; }
+.demo-video {
+  display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; background: rgba(0,0,0,0.35);
+}
 
 /* ─── CONTACT ─── */
 #contact { padding: 120px 64px; background: linear-gradient(180deg, rgba(10,16,32,0.95), rgba(10,16,32,0.92)); }
