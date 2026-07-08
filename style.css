@@ -392,12 +392,12 @@ footer { background: rgba(6,8,16,0.95); padding: 26px 64px; border-top: 1px soli
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 @media (max-width: 860px) {
-  nav { padding: 0 20px; width: calc(100% - 24px); top: 12px; }
+  nav { top: 0; width: 100%; padding: 0 22px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .mobile-close { right: 24px; }
 
-  #home { padding: 100px 24px 60px; }
+  #home { padding: 104px 24px 60px; }
   .hero-inner { grid-template-columns: 1fr; gap: 44px; }
   .hero-visual { order: -1; }
   .schematic-card { width: 320px; height: 320px; }
@@ -407,13 +407,20 @@ footer { background: rgba(6,8,16,0.95); padding: 26px 64px; border-top: 1px soli
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .panel:has(.skills-list) { width: auto; justify-self: stretch; }
-  .skills-list { grid-template-columns: 1fr; }
+  .skills-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+  .skill-row { max-width: none; padding: 10px 12px; }
 
   footer { flex-direction: column; gap: 10px; text-align: center; padding: 24px; }
 }
 
 @media (max-width: 540px) {
   .projects-grid { grid-template-columns: 1fr; }
+  .hero-text { text-align: center; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
   .hero-name { font-size: 2.8rem; }
-  .hero-buttons { flex-direction: column; align-items: flex-start; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .hero-actions { width: 100%; }
+  .hero-buttons { width: 100%; }
+  .btn-fill, .btn-ghost { justify-content: center; }
+  .contact-left-title, .form-intro h4 { text-align: center; }
 }
