@@ -241,7 +241,7 @@ h1.hero-name {
 }
 
 .panel:has(.skills-list) { width: fit-content; justify-self: start; }
-.skills-list { display: grid; grid-template-columns: repeat(2, 132px); gap: 0 12px; }
+.skills-list { display: grid; grid-template-columns: repeat(3, 132px); gap: 0 12px; }
 .skills-col { display: flex; flex-direction: column; gap: 9px; }
 .skill-row {
   display: flex; align-items: center; justify-content: space-between; padding: 10px 12px;
@@ -407,7 +407,12 @@ footer { background: rgba(6,8,16,0.95); padding: 26px 64px; border-top: 1px soli
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .panel:has(.skills-list) { width: auto; justify-self: stretch; }
-  .skills-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; }
+  .skills-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 10px; }
+  .skills-list .skills-col:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 10px) / 2);
+  }
   .skill-row { max-width: none; padding: 10px 12px; }
 
   footer { flex-direction: column; gap: 10px; text-align: center; padding: 24px; }
